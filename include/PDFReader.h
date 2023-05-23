@@ -24,12 +24,4 @@ private:
     std::unique_ptr<IPDFReaderDelegate> _delegate;
 };
 
-#if defined(__linux__)
-#include "PDFReaderDelegate.Linux.h"
-#elif defined(__APPLE__)
-#include "PDFReaderDelegate.Mac.h"
-#elif defined(_WIN32)
-#include "PDFReaderDelegate.Windows.h"
-#endif
-
 #endif

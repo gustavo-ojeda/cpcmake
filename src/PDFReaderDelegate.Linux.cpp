@@ -1,3 +1,5 @@
+#if defined(__linux__)
+
 #include <iostream>
 #include "PDFReaderDelegate.Linux.h"
 
@@ -12,3 +14,5 @@ void LinuxPDFReaderDelegate::closePDF()
     std::cout << "Linux PDF reader closing" << std::endl;
     // Linux-specific PDF reader closing code
 }
+
+#endif

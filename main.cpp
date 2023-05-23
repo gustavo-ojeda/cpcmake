@@ -1,16 +1,8 @@
-#include "PDFReader.h"
-
-#if defined(__linux__)
-using PlatformDelegate = LinuxPDFReaderDelegate;
-#elif defined(__APPLE__)
-using PlatformDelegate = MacPDFReaderDelegate;
-#elif defined(_WIN32)
-using PlatformDelegate = WindowsPDFReaderDelegate;
-#endif
+#include "PDFReaderFactory.h"
 
 int main()
 {
-    PDFReader<PlatformDelegate> pdfReader;
+    PDFReader<PlatformDelegate> pdfReader = createPDFReader();
     pdfReader.readPDF("sample.pdf");
 
     return 0;

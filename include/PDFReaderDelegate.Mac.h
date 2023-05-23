@@ -1,12 +1,16 @@
-#ifndef MAC_PDF_READER_DELEGATE_H
-#define MAC_PDF_READER_DELEGATE_H
+#if defined(__APPLE__)
 
-#include "IPDFReaderDelegate.h"
+#ifndef LINUX_PDF_READER_DELEGATE_H
+#define LINUX_PDF_READER_DELEGATE_H
 
-class MacPDFReaderDelegate : public IPDFReaderDelegate
+#include "PDFReaderDelegate.h"
+
+class MacPDFReaderDelegate : public BasePDFReaderDelegate
 {
     void openPDF(const std::string &filename) override;
     void closePDF() override;
 };
 
-#endif // MAC_PDF_READER_DELEGATE_H
+#endif // MacPDFReaderDelegate
+
+#endif

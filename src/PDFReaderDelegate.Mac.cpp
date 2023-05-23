@@ -1,3 +1,5 @@
+#if defined(__APPLE__)
+
 #include <iostream>
 #include "PDFReaderDelegate.Mac.h"
 
@@ -12,3 +14,5 @@ void MacPDFReaderDelegate::closePDF()
     std::cout << "Mac PDF reader closing" << std::endl;
     // Mac-specific PDF reader closing code
 }
+
+#endif

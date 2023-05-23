@@ -1,3 +1,5 @@
+#if defined(_WIN32)
+
 #include <iostream>
 #include "PDFReaderDelegate.Windows.h"
 
@@ -12,3 +14,5 @@ void WindowsPDFReaderDelegate::closePDF()
     std::cout << "Windows PDF reader closing" << std::endl;
     // Windows-specific PDF reader closing code
 }
+
+#endif
