@@ -1,7 +1,7 @@
 #ifndef PDF_READER_H
 #define PDF_READER_H
 
-#include <iostream>
+#include <memory>
 #include "IPDFReaderDelegate.h"
 
 // PDFReader is the cross-platform PDF Reader class using the template method pattern
@@ -10,7 +10,7 @@ class PDFReader
 {
 public:
     PDFReader()
-        : _delegate(std::make_unique<Delegate>())
+        : _delegate(std::unique_ptr<IPDFReaderDelegate>(new Delegate()))
     {
     }
 
