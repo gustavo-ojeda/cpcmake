@@ -34,6 +34,7 @@ target_link_libraries(PDFReaderExample)
 # Platform-specific libraries and settings if necessary
 if(WIN32)
     # Add Windows configs
+    set(STARTUP_PROJECT_NAME PDFReaderExample)
 elseif(APPLE)
     # This little macro lets you set any XCode specific property
     macro (set_xcode_property TARGET XCODE_PROPERTY XCODE_VALUE)
