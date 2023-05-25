@@ -3,7 +3,7 @@
 int main()
 {
     PDFReader<PlatformDelegate> pdfReader = createPDFReader();
-    pdfReader.readPDF("sample.pdf");
+    pdfReader.readPDF("example.pdf");
 
     return 0;
 }
